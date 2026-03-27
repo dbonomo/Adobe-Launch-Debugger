@@ -831,7 +831,7 @@ async function settingsSetter(settings) {
     const launchLib = document.querySelector("script[src*='/launch-']") || document.querySelector("script[src*='/satelliteLib-']");
     return launchLib ? launchLib.src : false;
   });
-  document.getElementById("currentlib").innerText = originalLaunchLib || "[No Launch Lib Detected]";
+  document.getElementById("currentlib").value = originalLaunchLib || "";
 }
 
 function logSettings(){
